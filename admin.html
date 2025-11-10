@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard — Smart Feedback</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <div class="container">
+    <button id="logoutBtn">Logout</button>
+    <h1>Admin Dashboard</h1>
+    <p>Welcome, <strong id="adminName">Admin</strong></p>
+
+    <h2>All Registered Users</h2>
+    <div id="usersLoading" class="loading">Loading users...</div>
+    <table id="usersTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <h2>All Feedback Entries</h2>
+    <div id="feedbackLoading" class="loading">Loading feedback...</div>
+    <table id="feedbackTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Message</th>
+          <th>Sentiment</th>
+          <th>Score</th>
+          <th>Timestamp</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="footer">
+      © 2025 Smart Feedback | Admin Panel
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

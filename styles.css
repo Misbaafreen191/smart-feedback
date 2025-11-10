@@ -1,0 +1,350 @@
+/* ==============================
+   Global Styles
+============================== */
+:root {
+  --bg-color: #f4f7fb;
+  --card-bg: #ffffff;
+  --primary-color: #2563eb;
+  --primary-hover: #1e40af;
+  --text-color: #1e293b;
+  --border-color: #e2e8f0;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 700px;
+  width: 90%;
+  margin: 3rem auto;
+}
+
+/* ==============================
+   Headings
+============================== */
+h1, h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+/* ==============================
+   Card Layout
+============================== */
+.card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* ==============================
+   Form Styles
+============================== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: #f9fafb;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* ==============================
+   Buttons
+============================== */
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+button#clearBtn {
+  background-color: #94a3b8;
+}
+
+button#clearBtn:hover {
+  background-color: #64748b;
+}
+
+/* ==============================
+   Sentiment Result
+============================== */
+.result {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f1f5f9;
+  border-left: 4px solid var(--primary-color);
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+.small {
+  font-size: 0.85rem;
+}
+
+.muted {
+  color: #6b7280;
+}
+
+/* ==============================
+   Chart Section
+============================== */
+canvas {
+  margin-top: 1rem;
+  width: 100%;
+  height: auto;
+}
+
+/* ==============================
+   Login & Register Pages
+============================== */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--bg-color);
+}
+
+.auth-card {
+  background: var(--card-bg);
+  padding: 2.5rem 3rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.auth-card h2 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.auth-card form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-card .links {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.auth-card a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-card a:hover {
+  text-decoration: underline;
+}
+
+/* ==============================
+   Buttons for Landing (Home)
+============================== */
+.auth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.auth-buttons button {
+  width: 100%;
+}
+
+.guest-btn {
+  background-color: #6b7280;
+}
+
+.guest-btn:hover {
+  background-color: #4b5563;
+}
+
+/* ==============================
+   Responsive
+============================== */
+@media (max-width: 600px) {
+  .card, .auth-card {
+    padding: 1.5rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
+/* ==============================
+ /* ---------------- Container & Layout ---------------- */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ---------------- Header ---------------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#logoutBtn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#logoutBtn:hover {
+  background-color: #c0392b;
+}
+
+/* ---------------- Sections ---------------- */
+.section {
+  margin-bottom: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.section h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+/* ---------------- Tables ---------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #3498db;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.loading {
+  font-style: italic;
+  color: #555;
+}
+
+/* ---------------- Delete Button ---------------- */
+.deleteBtn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.deleteBtn:hover {
+  background-color: #c0392b;
+}
+
+/* ---------------- Footer ---------------- */
+.footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #777;
+  border-top: 1px solid #ddd;
+}
+ 

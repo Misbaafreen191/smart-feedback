@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Feedback — Submit & Analyze</title>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Smart Feedback</h1>
+     
+    <!-- Feedback Form -->
+    <section class="card" id="submit-section">
+      <h2>Submit Feedback</h2>
+      <form id="feedbackForm" novalidate>
+        <label for="name">Name (optional)</label>
+        <input id="name" name="name" type="text" placeholder="Your name">
+
+        <label for="message">Feedback</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Write your feedback..."></textarea>
+
+        <div class="actions">
+          <button type="submit" id="submitBtn">Submit</button>
+          <button type="button" id="clearBtn">Clear</button>
+        </div>
+      </form>
+
+      <div id="result" class="result hidden">
+        <strong>Sentiment:</strong> <span id="sentimentLabel"></span>
+        <div id="confidence" class="small muted"></div>
+      </div>
+    </section>
+
+    <!-- Chart Section with smaller size -->
+    <section class="card" id="chart-section">
+      <h2>Sentiment Summary</h2>
+      <div style="width: 300px; height: 250px; margin: auto;">
+        <canvas id="sentimentChart"></canvas>
+      </div>
+      <div class="small muted">Counts updated after each submission.</div>
+    </section>
+
+    <!-- Recent Feedback (hidden for normal users, show only for admin via JS) -->
+    <section class="card hidden" id="recent-section">
+      <h2>Recent Feedback</h2>
+      <ul id="recentList" class="recent-list">
+        <!-- list populated by JS -->
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

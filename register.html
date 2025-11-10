@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Feedback — Register</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h2>Create an Account</h2>
+
+    <form id="registerForm" class="auth-form">
+      <label>Name</label>
+      <input type="text" id="regName" required placeholder="Your full name">
+
+      <label>Email</label>
+      <input type="email" id="regEmail" required placeholder="you@example.com">
+
+      <label>Password</label>
+      <input type="password" id="regPassword" required placeholder="Create password">
+
+      <label>Role</label>
+      <select id="regRole" required>
+        <option value="">Select Role</option>
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+      </select>
+
+      <div id="adminPassDiv" class="hidden">
+        <label>Admin Passkey</label>
+        <input type="password" id="adminPasskey" placeholder="Enter Admin Passkey">
+      </div>
+
+      <button type="submit" class="btn secondary">Register</button>
+    </form>
+
+    <p class="small muted">
+      Already have an account? <a href="login.html">Login here</a>
+    </p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
